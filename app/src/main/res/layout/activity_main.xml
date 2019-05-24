@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    >
+
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        layout="@layout/activity_maps"
+        android:id = "@+id/maps"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/maps"/>
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@id/maps"
+        android:backgroundTint="#C0C0C0">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationText"
+        android:layout_below="@id/maps"
+        android:backgroundTint="#000"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:paddingTop="2dp"
+        android:padding="10dp"/>
+    </android.support.v7.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/card_view"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/card_view"
+    android:orientation="vertical">
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            card_view:cardCornerRadius="4dp"
+            android:id="@+id/tempcard"
+            android:layout_below="@id/card_view"
+            >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:paddingRight="2dp"/>
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            card_view:cardCornerRadius="4dp"
+
+            android:layout_below="@id/card_view"
+            android:layout_toRightOf="@id/tempcard"
+            android:backgroundTint="#C0C0C0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/time"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+/>        </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</RelativeLayout>
+    </ScrollView>
+
+
